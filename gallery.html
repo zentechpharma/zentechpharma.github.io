@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+  * {
+box-sizing: border-box;
+/*overflow-x: hidden;*/
+}
+
+body {
+  background-color: #f1f1f1;
+  /*padding: 20px;*/
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background color to the active button */
+.btn.active {
+  background-color: #666;
+   color: white;
+}
+  </style>
+<title>Zentech Pharma</title>
+
+<!-- Data for crawlers and meta-data -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Zentech Pharma is a quality based pharmaceutical house with highly qualified & experienced team of professionals. The company holds expertise in manufacturing and supplying pharmaceutical & nutraceutical formulations with the aim of providing quality par excellence.">
+
+<!-- TODO -->
+    <meta name="keywords" content=" medical, pharmacy, pharmaceuticals, products, medicines, pills, dose, capsules, pharmaceutical, doctor, nurse, compunder, emergency, drugs, mdeical drugs, medicine, pill, antibiotic, anti-inflammatory, recommended, most recommended, , questions, solutions, answers, intuition, interview, competitive prgramming, english, share, friends, zentech, zentech Pharma, Zentech, Zentech pharma, ZENTECH, social, online, marketing, largest, world, measure, customized, optimize, smart, worldwide,PCD, Third party manufacturing, pharmaceutical manufacturer, wholesale, wholesale medicine, wholesale pharma, Best Price, Best Product, Best Rate,Number one PCD, Best PCD,Injection, Ayurvedic" >
+    <meta name="author" content="Ajay Bansal">
+    <!-- icon here -->
+    <link rel="shortcut icon" href="favico.ico">
+
+
+<!-- Latest compiled and minified CSS -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Some custom styling -->
+<style>
+</style>
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<!-- <link rel='stylesheet' href='{% static "base.css" %}' /> -->
+</head>
+
+
+
+
+<!-- BODY STARTS HERE -->
+<!-- style="background-color:#fff;" --> 
+<body class="bg-white">
+    <a id="top_of_page"></a>
+
+
+
+<!-- NAVBAR / HEADER -->
+<nav class="navbar navbar-expand-lg navbar-white mb-3 bg-dark" id="nothomenavbar" style="background-color:#15141f;">
+  
+  <button class="navbar-toggler col-sm-12" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    
+    <div class="col-sm-12" >
+      <div class="navbar-toggler-icon pull-right pt-1">
+      <i class="fa fa-navicon text-white py-0 my-0" ></i>
+    </div>
+      <div class="pull-left py-0 my-0 pt-1">
+        <i class="pull-left text-light" href="/">Zentech Pharma</i>
+        </div>
+      </div>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto align-items-center justify-content-between" style="width:100%;text-align:center;">
+      <li class="nav-item ">
+        <a class="nav-link text-white" id="thecategorynavbar" href="./"><i><b>Zentech Pharma</b></i></a>
+      </li>
+
+      <li class="nav-item ">
+        <a class="nav-link text-white" id="thecategorynavbar" href="./">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" id="thecategorynavbar" href="./zentech-products.pdf">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" id="thecategorynavbar" href="./gallery.html">Gallery</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" id="thecategorynavbar" href="./contactus.html">Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" id="thecategorynavbar" href="./aboutus.html">About Us</a>
+      </li>
+    </ul>
+
+</div>
+</nav>
+<!-- NAVBAR / HEADER ENDS HERE -->
+
+
+<div class='container ' class="bg-secondary">
+
+<!-- For separately inserting the featured section -->
+
+ <!--  <div class="col-md-3 d-none d-md-block">
+    <img class="img-responsive" src="logo_nobg.png" alt="Logo">
+  </div>
+ -->
+</div>
+<div id="myBtnContainer">
+  <!-- <button class="btn active" onclick="filterSelection('all')"> Show all</button> -->
+  <button class="btn active" onclick="filterSelection('Tablets')"> Tablets</button>
+  <button class="btn" onclick="filterSelection('Capsules')"> Capsules</button>
+  <button class="btn" onclick="filterSelection('PAEDIATRIC')"> Paediatric</button>
+  <button class="btn" onclick="filterSelection('Inj')"> Injectables</button>
+  <button class="btn" onclick="filterSelection('Syrup')"> Syrup</button>
+  <button class="btn" onclick="filterSelection('Ear_Eye_Drops')"> Ear/Eye Drops</button>
+  <button class="btn" onclick="filterSelection('Ointments')"> Ointments</button>
+  <button class="btn" onclick="filterSelection('Ayurvedic')"> Ayurvedic</button>
+  <button class="btn" onclick="filterSelection('Others')"> Others</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<!-- Add Product Pictures in this section -->
+<div class="row">
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zedten.jpg" style="width:100%">
+      <center><h4>Zedten</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zedten alu-alu.jpg" style="width:100%">
+      <center><h4>Zedten alu-alu</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zedten-mr.jpg" style="width:100%">
+      <center><h4>Zedten-mr</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zedten-sp.jpg" style="width:100%">
+      <center><h4>Zedten-sp</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zedten-th.jpg" style="width:100%">
+      <center><h4>Zedten-th</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/kiticef.jpg" style="width:100%">
+      <center><h4>Kiticef</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/mendiliv.jpg" style="width:100%">
+      <center><h4>Mendiliv</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/mozfix-lb.jpg" style="width:100%">
+      <center><h4>Mozfix-lb</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zeetel 40.jpg" style="width:100%">
+      <center><h4>Zeetel 40</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zenadip.jpg" style="width:100%">
+      <center><h4>Zenadip</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zeomol-p.jpg" style="width:100%">
+      <center><h4>Zeomol-p</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zepant-d.jpg" style="width:100%">
+      <center><h4>Zepant-d</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zepixime 200.jpg" style="width:100%">
+      <center><h4>Zepixime 200</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zepixime lb.jpg" style="width:100%">
+      <center><h4>Zepixime lb</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zepixo.jpg" style="width:100%">
+      <center><h4>Zepixo</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zepodoxime 200.jpg" style="width:100%">
+      <center><h4>Zepodoxime 200</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zevocin 500.jpg" style="width:100%">
+      <center><h4>Zevocin 500</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zevorine.jpg" style="width:100%">
+      <center><h4>Zevorine</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zevozine.jpg" style="width:100%">
+      <center><h4>Zevozine</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zevozine-fx.jpg" style="width:100%">
+      <center><h4>Zevozine-fx</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zevozine-lc.jpg" style="width:100%">
+      <center><h4>Zevozine-lc</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zezole-20.jpg" style="width:100%">
+      <center><h4>Zezole-20</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zezole-d.jpg" style="width:100%">
+      <center><h4>Zezole-d</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zinclav 625.jpg" style="width:100%">
+      <center><h4>Zinclav 625</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zinclav-lb.jpg" style="width:100%">
+      <center><h4>Zinclav-lb</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zodron-md.jpg" style="width:100%">
+      <center><h4>Zodron-md</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zofloxin 200.jpg" style="width:100%">
+      <center><h4>Zofloxin 200</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zofloxin-oz.jpg" style="width:100%">
+      <center><h4>Zofloxin-oz</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zolo 650.jpg" style="width:100%">
+      <center><h4>Zolo 650</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/avipred-4.jpg" style="width:100%">
+      <center><h4>Avipred-4</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/avirion 12.jpg" style="width:100%">
+      <center><h4>Avirion 12</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/citycan.jpg" style="width:100%">
+      <center><h4>Citycan</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/fourvit-xt.jpg" style="width:100%">
+      <center><h4>Fourvit-xt</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/renter 90.jpg" style="width:100%">
+      <center><h4>Renter 90</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/gold-dm.jpg" style="width:100%">
+      <center><h4>Gold-dm</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/hapcin.jpg" style="width:100%">
+      <center><h4>Hapcin</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zadcort.jpg" style="width:100%">
+      <center><h4>Zadcort</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zadcort 12.jpg" style="width:100%">
+      <center><h4>Zadcort 12</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zeaocal.jpg" style="width:100%">
+      <center><h4>Zeaocal</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/aviglim m1.jpg" style="width:100%">
+      <center><h4>Aviglim m1</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/aviglim-m2.jpg" style="width:100%">
+      <center><h4>Aviglim-m2</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zeocold.jpg" style="width:100%">
+      <center><h4>Zeocold</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zedacin 250.jpg" style="width:100%">
+      <center><h4>Zedacin 250</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Tablets">
+    <div class="content">
+      <img src="./pictures/tab/zedacin 500.jpg" style="width:100%">
+      <center><h4>Zedacin 500</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Capsules">
+    <div class="content">
+      <img src="./pictures/Caps/z-zole 200.jpg" style="width:100%">
+      <h4>Product Name</h4>
+      <p>Add Product Description here</p>
+    </div>
+  </div>
+  <div class="column Capsules">
+      <div class="content">
+        <img src="./pictures/Caps/z-zole 100.jpg" style="width:100%">
+        <h4>Product Name</h4>
+        <p>Add Product Description here</p>
+      </div>
+  </div>
+  <div class="column Capsules">
+      <div class="content">
+        <img src="./pictures/Caps/Belly-In.jpg" style="width:100%">
+        <h4>Product Name</h4>
+        <p>Add Product Description here</p>
+      </div>
+  </div>
+  <div class="column Capsules">
+      <div class="content">
+        <img src="./pictures/Caps/Racferol.jpg" style="width:100%">
+        <h4>Product Name</h4>
+        <p>Add Product Description here</p>
+      </div>
+  </div>
+  <div class="column Capsules">
+      <div class="content">
+        <img src="./pictures/Caps/sambac.jpg" style="width:100%">
+        <h4>Product Name</h4>
+        <p>Add Product Description here</p>
+      </div>
+  </div>
+  <div class="column Capsules">
+      <div class="content">
+        <img src="./pictures/Caps/zeaco-p.jpg" style="width:100%">
+        <h4>Product Name</h4>
+        <p>Add Product Description here</p>
+      </div>
+  </div>
+  <div class="column Capsules">
+      <div class="content">
+        <img src="./pictures/Caps/zepant dsr.jpg" style="width:100%">
+        <h4>Product Name</h4>
+        <p>Add Product Description here</p>
+      </div>
+  </div>
+  <div class="column Capsules">
+      <div class="content">
+        <img src="./pictures/Caps/zepradom.jpg" style="width:100%">
+        <h4>Product Name</h4>
+        <p>Add Product Description here</p>
+      </div>
+  </div>
+  <div class="column Capsules">
+      <div class="content">
+        <img src="./pictures/Caps/zerich.jpg" style="width:100%">
+        <h4>Product Name</h4>
+        <p>Add Product Description here</p>
+      </div>
+  </div>
+  <div class="column Capsules">
+      <div class="content">
+        <img src="./pictures/Caps/Zeride-ls.jpg" style="width:100%">
+        <h4>Product Name</h4>
+        <p>Add Product Description here</p>
+      </div>
+  </div>
+  <div class="column Capsules">
+      <div class="content">
+        <img src="./pictures/Caps/Zezole DSR.jpg" style="width:100%">
+        <h4>Product Name</h4>
+        <p>Add Product Description here</p>
+      </div>
+  </div>
+  <div class="column Capsules">
+      <div class="content">
+        <img src="./pictures/Caps/Zocal K27.jpg" style="width:100%">
+        <h4>Product Name</h4>
+        <p>Add Product Description here</p>
+      </div>
+  </div>
+  <div class="column Capsules">
+      <div class="content">
+        <img src="./pictures/Caps/ZP-Vit.jpg" style="width:100%">
+        <h4>Product Name</h4>
+        <p>Add Product Description here</p>
+      </div>
+  </div>
+  <div class="column Capsules">
+      <div class="content">
+        <img src="./pictures/Caps/Zyecopene.jpg" style="width:100%">
+        <h4>Product Name</h4>
+        <p>Add Product Description here</p>
+      </div>
+  </div>
+  <div class="column Capsules">
+      <div class="content">
+        <img src="./pictures/Caps/moni-forte.jpg" style="width:100%">
+        <h4>Product Name</h4>
+        <p>Add Product Description here</p>
+      </div>
+  </div>
+  <div class="column Capsules">
+      <div class="content">
+        <img src="./pictures/Caps/Kimidox-lb.jpg" style="width:100%">
+        <h4>Product Name</h4>
+        <p>Add Product Description here</p>
+      </div>
+  </div>
+  <div class="column Ayurvedic">
+    <div class="content">
+      <img src="./pictures/Ayurvedic/Dr Oil.jpeg" style="width:100%">
+      <center><h4>Dr Oil</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Ayurvedic">
+    <div class="content">
+      <img src="./pictures/Ayurvedic/Zeatus.jpeg" style="width:100%">
+      <center><h4>Zeatus</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Ayurvedic">
+    <div class="content">
+      <img src="./pictures/Ayurvedic/Zepilo.jpeg" style="width:100%">
+      <center><h4>Zepilo</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Ayurvedic">
+    <div class="content">
+      <img src="./pictures/Ayurvedic/Zerelief.jpeg" style="width:100%">
+      <center><h4>Zerelief</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Ayurvedic">
+    <div class="content">
+      <img src="./pictures/Ayurvedic/Zikorrhea.jpeg" style="width:100%">
+      <center><h4>Zikorrhea</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Ayurvedic">
+    <div class="content">
+      <img src="./pictures/Ayurvedic/Zilive 100ml.jpeg" style="width:100%">
+      <center><h4>Zilive 100ml</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Ayurvedic">
+    <div class="content">
+      <img src="./pictures/Ayurvedic/Zilive 200ml.jpeg" style="width:100%">
+      <center><h4>Zilive 200ml</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Ear_Eye_Drops">
+    <div class="content">
+      <img src="./pictures/Ear_Eye_Drops\Moxibiz.jpg" style="width:100%">
+      <center><h4>Moxibiz</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Ear_Eye_Drops">
+    <div class="content">
+      <img src="./pictures/Ear_Eye_Drops\Zeewax.jpeg" style="width:100%">
+      <center><h4>Zeewax</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Inj">
+    <div class="content">
+      <img src="./pictures/Inj/Zedacin.jpeg" style="width:100%">
+      <center><h4>Zedacin</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Inj">
+    <div class="content">
+      <img src="./pictures/Inj/ZEOTEC 1.5.png" style="width:100%">
+      <center><h4>ZEOTEC 1.5</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Inj">
+    <div class="content">
+      <img src="./pictures/Inj/ZEOTEC 1.png" style="width:100%">
+      <center><h4>ZEOTEC 1</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Inj">
+    <div class="content">
+      <img src="./pictures/Inj/ZEOTEC 250.png" style="width:100%">
+      <center><h4>ZEOTEC 250</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Inj">
+    <div class="content">
+      <img src="./pictures/Inj/ZEOTEC 500.png" style="width:100%">
+      <center><h4>ZEOTEC 500</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Inj">
+    <div class="content">
+      <img src="./pictures/Inj/ZEPANT 40 INJ .png" style="width:100%">
+      <center><h4>ZEPANT 40 INJ </h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Inj">
+    <div class="content">
+      <img src="./pictures/Inj/ZEPIPTA 4.5.png" style="width:100%">
+      <center><h4>ZEPIPTA 4.5</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Inj">
+    <div class="content">
+      <img src="./pictures/Inj/Zezone 1.5.jpeg" style="width:100%">
+      <center><h4>Zezone 1.5</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Inj">
+    <div class="content">
+      <img src="./pictures/Inj/ZEZONE-S.png" style="width:100%">
+      <center><h4>ZEZONE-S</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Inj">
+    <div class="content">
+      <img src="./pictures/Inj/Zodron.jpeg" style="width:100%">
+      <center><h4>Zodron</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Inj">
+    <div class="content">
+      <img src="./pictures/Inj/AVITEC-T.png" style="width:100%">
+      <center><h4>AVITEC-T</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Inj">
+    <div class="content">
+      <img src="./pictures/Inj/Cinther-AB.jpeg" style="width:100%">
+      <center><h4>Cinther-AB</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Inj">
+    <div class="content">
+      <img src="./pictures/Inj/MEOMED INJ.png" style="width:100%">
+      <center><h4>MEOMED INJ</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Inj">
+    <div class="content">
+      <img src="./pictures/Inj/Meritaze.jpeg" style="width:100%">
+      <center><h4>Meritaze</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Inj">
+    <div class="content">
+      <img src="./pictures/Inj/NONATE 25.png" style="width:100%">
+      <center><h4>NONATE 25</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Inj">
+    <div class="content">
+      <img src="./pictures/Inj/NONATE 50.png" style="width:100%">
+      <center><h4>NONATE 50</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Inj">
+    <div class="content">
+      <img src="./pictures/Inj/V-PENEM.png" style="width:100%">
+      <center><h4>V-PENEM</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Ointments">
+    <div class="content">
+      <img src="./pictures/Ointments/Zulycon.jpeg" style="width:100%">
+      <center><h4>Zulycon</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Ointments">
+    <div class="content">
+      <img src="./pictures/Ointments/Ridbact.jpeg" style="width:100%">
+      <center><h4>Ridbact</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Ointments">
+    <div class="content">
+      <img src="./pictures/Ointments/Zenflame.jpeg" style="width:100%">
+      <center><h4>Zenflame Gel</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Others">
+    <div class="content">
+      <img src="./pictures/Others/Zymdent.jpg" style="width:100%">
+      <center><h4>Zymdent</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Others">
+    <div class="content">
+      <img src="./pictures/Others/Cool X.jpg" style="width:100%">
+      <center><h4>Cool X</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Others">
+    <div class="content">
+      <img src="./pictures/Others/Zetroplex.jpg" style="width:100%">
+      <center><h4>Zetroplex</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column PAEDIATRIC">
+    <div class="content">
+      <img src="./pictures/PAEDIATRIC/ZEMEF-P.jpeg" style="width:100%">
+      <center><h4>ZEMEF-P</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column PAEDIATRIC">
+    <div class="content">
+      <img src="./pictures/PAEDIATRIC/Zepixime-50.jpeg" style="width:100%">
+      <center><h4>Zepixime-50</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column PAEDIATRIC">
+    <div class="content">
+      <img src="./pictures/PAEDIATRIC/Zepodoxime 50.jpeg" style="width:100%">
+      <center><h4>Zepodoxime 50</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column PAEDIATRIC">
+    <div class="content">
+      <img src="./pictures/PAEDIATRIC/zevozine lc.jpg" style="width:100%">
+      <center><h4>zevozine lc</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column PAEDIATRIC">
+    <div class="content">
+      <img src="./pictures/PAEDIATRIC/ZIMMUNE.jpeg" style="width:100%">
+      <center><h4>ZIMMUNE</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column PAEDIATRIC">
+    <div class="content">
+      <img src="./pictures/PAEDIATRIC/ZINCLAV DS.jpeg" style="width:100%">
+      <center><h4>ZINCLAV DS</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column PAEDIATRIC">
+    <div class="content">
+      <img src="./pictures/PAEDIATRIC/ZIZYME DROPS.jpeg" style="width:100%">
+      <center><h4>ZIZYME DROPS</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column PAEDIATRIC">
+    <div class="content">
+      <img src="./pictures/PAEDIATRIC/ZOFLOXIN 50.jpeg" style="width:100%">
+      <center><h4>ZOFLOXIN 50</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column PAEDIATRIC">
+    <div class="content">
+      <img src="./pictures/PAEDIATRIC/ZOLO 250.jpeg" style="width:100%">
+      <center><h4>ZOLO 250</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column PAEDIATRIC">
+    <div class="content">
+      <img src="./pictures/PAEDIATRIC/CHINFLOX.jpeg" style="width:100%">
+      <center><h4>CHINFLOX</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column PAEDIATRIC">
+    <div class="content">
+      <img src="./pictures/PAEDIATRIC/KIDYVOM DROPS.jpeg" style="width:100%">
+      <center><h4>KIDYVOM DROPS</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column PAEDIATRIC">
+    <div class="content">
+      <img src="./pictures/PAEDIATRIC/MENTO-OZ.jpeg" style="width:100%">
+      <center><h4>MENTO-OZ</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column PAEDIATRIC">
+    <div class="content">
+      <img src="./pictures/PAEDIATRIC/Novikid Drops.jpeg" style="width:100%">
+      <center><h4>Novikid Drops</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column PAEDIATRIC">
+    <div class="content">
+      <img src="./pictures/PAEDIATRIC/Racferol.jpeg" style="width:100%">
+      <center><h4>Racferol</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column PAEDIATRIC">
+    <div class="content">
+      <img src="./pictures/PAEDIATRIC/Vibcold Drops.jpeg" style="width:100%">
+      <center><h4>Vibcold Drops</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column PAEDIATRIC">
+    <div class="content">
+      <img src="./pictures/PAEDIATRIC/Vibcold.jpeg" style="width:100%">
+      <center><h4>Vibcold</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column PAEDIATRIC">
+    <div class="content">
+      <img src="./pictures/PAEDIATRIC/ZADCORT SYP.jpeg" style="width:100%">
+      <center><h4>ZADCORT SYP</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column PAEDIATRIC">
+    <div class="content">
+      <img src="./pictures/PAEDIATRIC/ZEDTEN.jpeg" style="width:100%">
+      <center><h4>ZEDTEN</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Syrup">
+    <div class="content">
+      <img src="./pictures/Syrup/Zekool.jpeg" style="width:100%">
+      <center><h4>Zekool</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Syrup">
+    <div class="content">
+      <img src="./pictures/Syrup/Zethol.png" style="width:100%">
+      <center><h4>Zethol</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Syrup">
+    <div class="content">
+      <img src="./pictures/Syrup/Zetuf.png" style="width:100%">
+      <center><h4>Zetuf</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Syrup">
+    <div class="content">
+      <img src="./pictures/Syrup/Zizyme.jpeg" style="width:100%">
+      <center><h4>Zizyme</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Syrup">
+    <div class="content">
+      <img src="./pictures/Syrup/Z-PR DS.jpeg" style="width:100%">
+      <center><h4>Z-PR DS</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Syrup">
+    <div class="content">
+      <img src="./pictures/Syrup/ZP-Vit.jpeg" style="width:100%">
+      <center><h4>ZP-Vit</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Syrup">
+    <div class="content">
+      <img src="./pictures/Syrup/Zyecopene.jpeg" style="width:100%">
+      <center><h4>Zyecopene</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Syrup">
+    <div class="content">
+      <img src="./pictures/Syrup/Cezal.jpeg" style="width:100%">
+      <center><h4>Cezal</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Syrup">
+    <div class="content">
+      <img src="./pictures/Syrup/Fourvit-XT.jpeg" style="width:100%">
+      <center><h4>Fourvit-XT</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Syrup">
+    <div class="content">
+      <img src="./pictures/Syrup/Novibion-L.jpeg" style="width:100%">
+      <center><h4>Novibion-L</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Syrup">
+    <div class="content">
+      <img src="./pictures/Syrup/Proziel.jpeg" style="width:100%">
+      <center><h4>Proziel</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Syrup">
+    <div class="content">
+      <img src="./pictures/Syrup/Ridstone.jpeg" style="width:100%">
+      <center><h4>Ridstone</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Syrup">
+    <div class="content">
+      <img src="./pictures/Syrup/Stucal.jpeg" style="width:100%">
+      <center><h4>Stucal</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Syrup">
+    <div class="content">
+      <img src="./pictures/Syrup/Zeedux.jpeg" style="width:100%">
+      <center><h4>Zeedux</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Syrup">
+    <div class="content">
+      <img src="./pictures/Syrup/Zeexol.png" style="width:100%">
+      <center><h4>Zeexol</h4></center>
+      <p></p>
+    </div>
+  </div>
+  <div class="column Syrup">
+    <div class="content">
+      <img src="./pictures/Syrup/Zeflate.png" style="width:100%">
+      <center><h4>Zeflate</h4></center>
+      <p></p>
+    </div>
+  </div>
+
+<!-- END GRID -->
+</div>
+
+
+
+<!-- closing the container -->
+</div> 
+
+
+
+<!-- Modal for displaying image -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+        <!-- <img src="{% static 'address.jpg' %}"/> -->
+        <p>zentechpharmaceuticals@gmail.com</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Footer  -->
+<!-- style="background-color:#15141f;" -->
+<div class=" navbar sticky-bottom mt-4 pt-2 pb-4" style="background-color:#15141f;"  >
+
+    <!-- Footer Elements -->
+    <div class="row col-md-12">
+
+      <p class="col-md-12 text-center text-align"> 
+        <div class="col-md-4 col-sm-12 text-center">
+        <a href="./"style="font-size:1.25rem;"> <span class="text-secondary">Zentech Pharma</span> </a>
+        </div>
+        
+        <div class="col-md-4 col-sm-12 text-center mb-2">
+        <a style="font-size:1.25rem;cursor:pointer;"onclick="topFunction()" class="text-secondary text-center">Back to Top</a>
+        </div>
+        
+
+        <div class="col-md-4 col-sm-12 text-center">
+        <a class="text-secondary px-2" data-toggle="modal" data-target="#myModal" style="cursor:pointer;">
+            <span class="fa fa-envelope fa-2x"  ></span> 
+        </a>
+        <a class=" text-secondary  px-2" target="_blank" href="https://instagram.com/zentechpharma">
+        <span class="fa fa-instagram fa-2x"  ></span> </a>
+        
+        <a class=" text-secondary px-2" target="_blank" href="https://www.facebook.com/zentechpharma/">
+        <span class="fa fa-facebook-square fa-2x"  ></span></a>
+        </div>
+      </p>
+
+    </div>
+    <!-- Footer Elements -->
+
+ 
+  </div>
+  <!-- Footer -->
+
+
+
+
+    <!-- Bootstrap core JavaScript-->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.4.0/marked.min.js" ></script>
+<script type="text/javascript">
+	(function () {
+    $(".wmd-panel").css("margin-Left","0%");
+}());
+</script>
+
+<script>
+    function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+} 
+
+</script>
+
+
+</body>
+<script type="text/javascript">
+  filterSelection("Tablets") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+</html>
